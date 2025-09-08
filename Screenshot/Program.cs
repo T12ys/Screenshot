@@ -36,7 +36,7 @@ class Program
 
     static void TakeScreenshot()
     {
-        // Жёсткий путь для сохранения
+        
         string screenshotsFolder = @"C:\Users\User\Desktop\CheckCode";
         if (!System.IO.Directory.Exists(screenshotsFolder))
             System.IO.Directory.CreateDirectory(screenshotsFolder);
@@ -63,7 +63,7 @@ class Program
             bmp.Save(fileName, ImageFormat.Png);
         }
 
-        // Освобождаем ресурсы
+        
         SelectObject(hdcMem, oldBitmap);
         DeleteObject(hBitmap);
         DeleteDC(hdcMem);
